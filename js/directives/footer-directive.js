@@ -3,6 +3,6 @@ angular.module('app').directive('footer', [function() {
         link: function($scope) {
 
         },
-        template: 'Footer'
+        templateUrl: 'templates/footer.html'
     }
 }]);

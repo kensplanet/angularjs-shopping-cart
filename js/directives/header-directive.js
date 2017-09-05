@@ -3,6 +3,6 @@ angular.module('app').directive('header', [function() {
         link: function($scope) {
 
         },
-        template: 'Header'
+        templateUrl: 'templates/header.html'
     }
 }]);
