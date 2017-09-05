@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 6.9.4
+branches:
+  only:
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_22920e80ce23_key -iv $encrypted_22920e80ce23_iv
+  -in travis.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+after_script: scp -r -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o
+  PubkeyAuthentication=yes -o PasswordAuthentication=no ./* ubuntu@34.193.114.124:/home/ubuntu/public/angularjs-shopping-cart
